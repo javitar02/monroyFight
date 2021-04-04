@@ -42,8 +42,14 @@ public class Juego {
 	}
 
 	public char[] nombresJugadores() {
-		// TODO Auto-generated method stub
-		return null;
+		int i;
+		
+		for(i=0;i<numJugadores;i++) {
+			
+		}
+		
+		
+		return ;
 	}
 
 	public char[] valoresJugadores() {
@@ -52,12 +58,19 @@ public class Juego {
 	}
 
 	public boolean isTerminado() {
-		// TODO Auto-generated method stub
-		return false;
+		boolean terminado=false;
+		int i;
+		
+		for(i=0;i<jugadores.length && !terminado;i++)
+		if(jugadores[i].getDinero()==Constantes.MAX_DINERO) {
+			terminado=true;
+		}
+		
+		return terminado;
 	}
 
 	public int getNumeroMovimientosJugador() {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 
@@ -77,12 +90,20 @@ public class Juego {
 	}
 
 	public String getGanador() {
-		// TODO Auto-generated method stub
-		return null;
+		String info = null;
+		int i;
+		
+		for(i=0;i<jugadores.length;i++) {
+			if(jugadores[i].getDinero()==Constantes.MAX_DINERO) {
+				info="Enhorabuena al ganador: "+jugadores[i].g;
+			}
+		}
+		
+		return info;
 	}
 
 	public void crearJugador(TipoJugador tipo) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	
