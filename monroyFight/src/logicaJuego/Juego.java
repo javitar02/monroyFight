@@ -1,7 +1,11 @@
 package logicaJuego;
 
 import elementos.Elemento;
+import elementos.Elfo;
+import elementos.Guerrero;
 import elementos.Jugador;
+import elementos.Mago;
+import elementos.Orco;
 
 public class Juego {
 	private Elemento [][]tablero;
@@ -70,8 +74,20 @@ public class Juego {
 	}
 
 	public int getNumeroMovimientosJugador() {
+		int movimientosPorJugador = 0;
 		
-		return 0;
+		//ELFO
+		movimientosPorJugador=(int)Math.random()*Constantes.MAX_DADO_ELFO+1;
+		//ORCO
+		movimientosPorJugador=(int)Math.random()*Constantes.MAX_DADO_OGRO+1;
+		//GUERRERO
+		movimientosPorJugador=(int)Math.random()*Constantes.MAX_DADO_GUERRERO+1;
+		//MAGO
+		movimientosPorJugador=(int)Math.random()*Constantes.MAX_DADO_MAGO+1;
+		
+		
+		
+		return movimientosPorJugador;
 	}
 
 	public String getJugadorTurno() {
@@ -95,17 +111,33 @@ public class Juego {
 		
 		for(i=0;i<jugadores.length;i++) {
 			if(jugadores[i].getDinero()==Constantes.MAX_DINERO) {
-				info="Enhorabuena al ganador: "+jugadores[i].g;
+				info="Enhorabuena al ganador: "+jugadores[i];
 			}
 		}
 		
 		return info;
 	}
 
-	public void crearJugador(TipoJugador tipo) {
+	public void crearJugador(Jugador tipo)throws JuegoException {
+		int i;
 		
+		for(i=0;i<numJugadores;i++) {
+			if(tipo instanceof Elfo) {
+				Elfo elfo=(Elfo) jugadores[numJugadores];
+			}
+			if(tipo instanceof Guerrero) {
+				Guerrero guerrero=(Guerrero) jugadores[numJugadores];
+			}
+			if(tipo instanceof Mago) {
+				Mago mago=(Mago) jugadores[numJugadores];
+			}
+			if(tipo instanceof Orco) {
+				Orco orco=(Orco) jugadores[numJugadores];
+			}else {
+				throw new JuegoException("Seleccione una clase válida");
+			}
 		
 	}
-	
-	
-}
+		
+	}
+	}
