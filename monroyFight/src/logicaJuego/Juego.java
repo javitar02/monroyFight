@@ -1,5 +1,8 @@
 package logicaJuego;
 
+import java.util.Iterator;
+import java.util.Random;
+
 import elementos.Elemento;
 import elementos.Elfo;
 import elementos.Guerrero;
@@ -48,16 +51,24 @@ public class Juego {
 	public char[] nombresJugadores() {
 		int i;
 		
-		for(i=0;i<numJugadores;i++) {
+		for(i=0;i<jugadores.length;i++) {
 			
 		}
 		
 		
-		return ;
+		return null;
 	}
 
 	public char[] valoresJugadores() {
-		// TODO Auto-generated method stub
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		return null;
 	}
 
@@ -118,26 +129,45 @@ public class Juego {
 		return info;
 	}
 
-	public void crearJugador(Jugador tipo)throws JuegoException {
+	public void crearJugador(TipoJugador tipo)throws JuegoException {
 		int i;
+		int posicion;
 		
-		for(i=0;i<numJugadores;i++) {
-			if(tipo instanceof Elfo) {
-				Elfo elfo=(Elfo) jugadores[numJugadores];
+		
+		
+		boolean repetido=false;
+		Jugador otro;
+		
+		do {
+			Random r=new Random();
+			posicion=r.nextInt(numJugadores);
+			for (int j = 0; j < jugadores.length; j++) {
+				if(jugadores[j].getSimbolo()==null) {
+					
+				}
+				
 			}
-			if(tipo instanceof Guerrero) {
-				Guerrero guerrero=(Guerrero) jugadores[numJugadores];
+		
+		} while (!repetido);
+			
+		 
+			
+			if(tipo==TipoJugador.ELFO) {
+				otro=new Elfo(Constantes.NOMBRES.charAt(posicion));
 			}
-			if(tipo instanceof Mago) {
-				Mago mago=(Mago) jugadores[numJugadores];
+			if(tipo==TipoJugador.GUERRERO) {
+				otro=new Guerrero(Constantes.NOMBRES.charAt(posicion));
 			}
-			if(tipo instanceof Orco) {
-				Orco orco=(Orco) jugadores[numJugadores];
+			if(tipo==TipoJugador.MAGO) {
+				otro=new Mago(Constantes.NOMBRES.charAt(posicion));
+			}
+			if(tipo==TipoJugador.ORCO) {
+				otro=new Orco(Constantes.NOMBRES.charAt(posicion));
 			}else {
 				throw new JuegoException("Seleccione una clase válida");
 			}
 		
 	}
-		
-	}
-	}
+}		
+	
+	

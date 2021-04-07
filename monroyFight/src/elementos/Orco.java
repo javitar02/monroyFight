@@ -1,10 +1,12 @@
 package elementos;
 
+import logicaJuego.Constantes;
+
 public class Orco extends Jugador {
 
-	public Orco(int velocidad, int magia, int fuerza, int fila, int columna, int dinero, int gemas, int pociones) {
-		super(velocidad, magia, fuerza, fila, columna, dinero, gemas, pociones);
-	
+	public Orco(char simbolo) {
+		super(Constantes.VELOCIDAD_OGRO, Constantes.MAX_MAGIA_OGRO, Constantes.MAX_FUERZA_OGRO, 0, 0, 0);
+		
 	}
 
 

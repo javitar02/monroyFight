@@ -62,7 +62,7 @@ public class MainJuego {
 		int numJugadores;
 
 		do {
-			System.out.println("Introduzca número de jugadores entre "+ Constantes.MIN_JUGADORES +  "  y " + Constantes.MAX_JUGADORES);
+			System.out.println("Introduzca nï¿½mero de jugadores entre "+ Constantes.MIN_JUGADORES +  "  y " + Constantes.MAX_JUGADORES);
 			numJugadores = Integer.parseInt(teclado.nextLine());
 		} while (numJugadores < Constantes.MIN_JUGADORES || numJugadores > Constantes.MAX_JUGADORES);
 
@@ -71,7 +71,7 @@ public class MainJuego {
 		for (int i = 1; i <= numJugadores; i++) {
 
 			TipoJugador tipo = solicitarTipoJugador();
-			juego.crearJugador(tipo);
+			juego.crearJugador(jugador a);
 
 		}
 		return juego;

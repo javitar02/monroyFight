@@ -13,14 +13,13 @@ public abstract class Jugador {
 	private int pociones;
 	private TipoJugador tipo;
 	private String nombre;
+	private char simbolo;
 	
-	public Jugador(int velocidad, int magia, int fuerza, int fila, int columna, int dinero, int gemas, int pociones) {
+	public Jugador(int velocidad, int magia, int fuerza, int dinero, int gemas, int pociones) {
 		super();
 		this.velocidad = velocidad;
 		this.magia = magia;
 		this.fuerza = fuerza;
-		this.fila = fila;
-		this.columna = columna;
 		this.dinero = dinero;
 		this.gemas = gemas;
 		this.pociones = pociones;
@@ -45,7 +44,10 @@ public abstract class Jugador {
 	public int getDinero() {
 		return dinero;
 	}
-
+	
+	public char getSimbolo() {
+		return simbolo;
+	}
 
 	public void setDinero(int dinero) {
 		this.dinero = dinero;

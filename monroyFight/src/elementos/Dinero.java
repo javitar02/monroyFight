@@ -6,5 +6,6 @@ public class Dinero extends Elemento{
 		super(simbolo);
 		
 	}
-
+	
+	
 }

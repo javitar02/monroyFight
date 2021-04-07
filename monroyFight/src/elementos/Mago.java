@@ -1,9 +1,11 @@
 package elementos;
 
+import logicaJuego.Constantes;
+
 public class Mago extends Jugador{
 
-	public Mago(int velocidad, int magia, int fuerza, int fila, int columna, int dinero, int gemas, int pociones) {
-		super(velocidad, magia, fuerza, fila, columna, dinero, gemas, pociones);
+	public Mago(char simbolo) {
+		super(Constantes.VELOCIDAD_MAGO, Constantes.MAX_MAGIA_MAGO, Constantes.MAX_FUERZA_MAGO, 0, 0, 0);
 		
 	}
 

@@ -1,9 +1,11 @@
 package elementos;
 
+import logicaJuego.Constantes;
+
 public class Elfo extends Jugador {
 
-	public Elfo(int velocidad, int magia, int fuerza, int fila, int columna, int dinero, int gemas, int pociones) {
-		super(velocidad, magia, fuerza, fila, columna, dinero, gemas, pociones);
+	public Elfo(char simbolo) {
+		super(Constantes.VELOCIDAD_ELFO, Constantes.MAX_MAGIA_ELFO, Constantes.MAX_FUERZA_ELFO, 0, 0, 0);
 		
 	}
 
