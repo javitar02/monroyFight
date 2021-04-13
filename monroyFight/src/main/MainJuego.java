@@ -23,7 +23,7 @@ public class MainJuego {
 			System.out.println(juego.valoresJugadores());
 			
 			while (!juego.isTerminado()) {
-				int dado = juego.getNumeroMovimientosJugador();
+				int dado = juego.getNumeroMovimientosJugador(jugador);
 				
 				System.out.println(
 						"Le toca al jugador " + juego.getJugadorTurno() + ". El dado saca " + dado + " movimientos");
@@ -71,7 +71,7 @@ public class MainJuego {
 		for (int i = 1; i <= numJugadores; i++) {
 
 			TipoJugador tipo = solicitarTipoJugador();
-			juego.crearJugador(jugador a);
+			juego.crearJugador(TipoJugador a);
 
 		}
 		return juego;

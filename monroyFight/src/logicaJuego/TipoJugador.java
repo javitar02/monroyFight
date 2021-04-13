@@ -1,7 +1,7 @@
 package logicaJuego;
 
 public enum TipoJugador{
-ELFO,GUERRERO,MAGO,ORCO
+ELFO,GUERRERO,MAGO,OGRO
 
 
 }

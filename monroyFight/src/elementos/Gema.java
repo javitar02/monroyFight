@@ -6,5 +6,5 @@ public class Gema extends Elemento{
 		super(simbolo);
 		
 	}
-
+	
 }

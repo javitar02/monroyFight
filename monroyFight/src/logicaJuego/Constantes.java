@@ -1,7 +1,7 @@
 package logicaJuego;
 
 public class Constantes {
-	public static final String NOMBRES="123456";
+	public static final String NOMBRES="UVWXYZ";
 	public static final int ALTO=10;
 	public static final int ANCHO=10;
 	
@@ -35,14 +35,14 @@ public class Constantes {
 	public static final int VELOCIDAD_MAGO=5;
 
 	//MOVIMIENTOS
-	public static final char norte='N';
-	public static final char sur='S';
-	public static final char este='E';
-	public static final char oeste='O';
+	public static final char NORTE='N';
+	public static final char SUR='S';
+	public static final char ESTE='E';
+	public static final char OESTE='O';
 	
 	//OBSTACULOS Y OBJETOS A RECOGER
 	public static final int MAX_DINERO=5;
 	public static final int MAX_GEMAS=6;
-	public static final int MAX_ROCAS=4;
-	public static final int MAX_POZOS=2;
+	public static final int MAX_ROCAS=3;
+	public static final int MAX_POZOS=4;
 }
